@@ -99,50 +99,9 @@ The code is Python. The main loop is compiled with Numba as a pure speed optimis
 - **No game theory.** NPCs have no goals or memory. The agent can exploit the same trader repeatedly with no consequence.
 - **Fixed mechanics.** The agent does not choose whether to trade and cannot see NPC positions or types.
 
----
-
-## Installation
-
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt   # numpy, numba, matplotlib, pandas (adjust to your actual requirements)
-```
-
-## Usage
-
-```bash
-# Experiment A: randomised personalities
-python <script_a>.py
-
-# Experiment B: learning agents
-python <script_b>.py
-```
-
-<!-- Replace the script names and add flags (seed, number of agents/episodes) to match the repository. -->
-
-## Repository layout
-
-```
-<fill in: simulation core, experiment scripts, plotting, thesis PDF>
-```
-
-## Reproducibility
-
-Report the random seeds and Python, NumPy and Numba versions used for the headline numbers above.
 
 ## References
 
 Barry & Friedman, personality and distributive negotiation. Tversky & Kahneman, loss aversion. Meta-analyses of Big Five traits and earnings and wealth: see the thesis bibliography for full citations.
 
-## Citation
 
-```
-Miljković, V. (2026). Simulating the Effect of Personality Traits on Economic Outcomes
-Using Reinforcement Learning. BSc thesis, Faculty of Technical Sciences, University of Novi Sad.
-```
-
-## License
-
-<choose one, e.g. MIT>
