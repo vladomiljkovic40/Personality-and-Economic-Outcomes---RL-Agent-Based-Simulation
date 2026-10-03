@@ -104,4 +104,32 @@ The code is Python. The main loop is compiled with Numba as a pure speed optimis
 
 Barry & Friedman, personality and distributive negotiation. Tversky & Kahneman, loss aversion. Meta-analyses of Big Five traits and earnings and wealth: see the thesis bibliography for full citations.
 
+## Installation
 
+```bash
+git clone https://github.com/vladomiljkovic40/Personality-and-Economic-Outcomes---RL-Agent-Based-Simulation.git
+cd Personality-and-Economic-Outcomes---RL-Agent-Based-Simulation
+python -m venv .venv && source .venv/bin/activate
+pip install numpy pandas matplotlib seaborn numba
+```
+
+## Usage
+
+```bash
+python RL_Personality_Agent.py
+```
+
+No command-line arguments. Both experiments run in sequence:
+
+- **Experiment A:** 12,000 random personalities, 10 episodes each, with fixed (median) and lognormal starting wealth. Writes `sweep_results_fixed.csv` and `sweep_results_gini.csv`.
+- **Experiment B:** 1,000 independent agents, up to 15,000 training episodes each, with early stopping once the greedy trait choice has converged. Each learned profile is then evaluated over 10 episodes.
+- **Plot:** `validity_analysis_money.png` compares A and B.
+
+Seeds: Experiment A uses `default_rng(0)`. Experiment B agent seeds are `arange(n) * 12345 + 42`.
+
+## Citation
+
+```
+Miljković, V. (2026). Simulating the Effect of Personality Traits on Economic Outcomes
+Using Reinforcement Learning. BSc thesis, Faculty of Technical Sciences, University of Novi Sad.
+```
